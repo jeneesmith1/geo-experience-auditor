@@ -23,7 +23,7 @@ const client = new Anthropic();
 
 export async function runAudit(targetUrl: string): Promise<AuditResult> {
   try {
-    const dynamicUserPrompt = createUserPrompt(targetUrl);
+    const dynamicUserPrompt = createUserPrompt(new URL(targetUrl));
     
     const msg = await client.messages.create({
       model: "claude-opus-4-8",
@@ -36,6 +36,7 @@ export async function runAudit(targetUrl: string): Promise<AuditResult> {
     });
 
     const rawText = msg.content[0].type === 'text' ? msg.content[0].text : '';
+    console.log(rawText);
     
     const parsedData: AuditResult = JSON.parse(rawText);
     return parsedData;

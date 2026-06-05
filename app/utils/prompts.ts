@@ -42,6 +42,33 @@ If the site is developer-focused documentation, score generously.
 Consumer sites with heavy JS and no sitemap should score lower. 
 Sites with llms.txt should get a significant bonus.`;
  
+export const llmsTxtSystemPrompt =
+`You are an expert in the llms.txt standard (https://llmstxt.org). Your job is to generate a well-structured llms.txt file for a website based on its URL.
+
+The llms.txt format is a Markdown file placed at the root of a domain that helps LLMs understand a site's content and navigate it efficiently. It follows this structure:
+
+1. An H1 heading with the site/project name
+2. An optional blockquote with a short description of the site
+3. One or more H2 sections grouping related pages (e.g. "Docs", "API Reference", "Blog", "About")
+4. Under each section: a Markdown list of links — \`- [Page Title](https://example.com/path): brief description of what the page contains\`
+5. Optionally, an H2 "Optional" section for supplementary links
+
+Generate a realistic, well-populated llms.txt for the given site. Use your knowledge of the site or make reasonable inferences based on the hostname and site type.
+
+Rules:
+- Include 3-6 H2 sections appropriate for the site type
+- Each section should have 3-8 links
+- Descriptions should be concise and informative for an LLM reader (1 sentence max)
+- Use real or plausible page paths based on common conventions for that type of site
+- Return ONLY the raw Markdown content of the llms.txt file — no explanation, no code fences, no preamble`;
+
+export const createLlmsTxtUserPrompt = (url: URL) => {
+  return `Generate an llms.txt file for this website: ${url.href}
+The site's hostname is: ${url.hostname}
+Use your knowledge of this site or infer its structure from the hostname and any common conventions for this type of site.
+Return only the raw Markdown content of the llms.txt file.`;
+};
+
 export const createUserPrompt = (url: URL) => {
     return `Audit this URL for AI agent readiness: ${url.href} 
         The site's hostname is: ${url.hostname}
