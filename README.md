@@ -1,6 +1,7 @@
 # GEO Experience Auditor
 
 This site can help you audit your product or site to see how accessible it is for AI agents to understand navigate. It makes use of the llms.txt standard, first popularized by Jeremy Howard from Answer.AI.
+https://github.com/user-attachments/assets/e80dcbc8-3c83-4713-85a3-581f36893c25
 
 <img width="1064" height="777" alt="Screenshot 2026-06-04 at 10 34 53 PM" src="https://github.com/user-attachments/assets/1635f7e7-df38-49a4-a58f-d82faa0c3e94" />
 
