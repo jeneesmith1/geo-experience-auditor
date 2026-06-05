@@ -1,6 +1,7 @@
 # GEO Experience Auditor
 
-> A web tool for auditing how accessible your site is to AI agents and LLM-powered tools. Generates llms.txt files and scores sites on agent readiness.
+> A web tool for auditing how accessible your site is to AI agents and LLM-powered tools. 
+> Generates llms.txt files and scores sites on agent readiness.
 
 ## Features
 
