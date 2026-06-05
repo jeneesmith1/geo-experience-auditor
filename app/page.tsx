@@ -48,7 +48,7 @@ export default function Home() {
       <header className="topHeader">
         <div className="urlIndicator">
           <span className="urlDot"></span>
-          <span className="urlText">{url || 'https://jeneesmith.com'}</span>
+          <span className="urlText">{url || 'https://merge.dev'}</span>
         </div>
         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
           <Link href="/llms-txt" className="newAuditButton" style={{ textDecoration: 'none' }}>
