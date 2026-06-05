@@ -7,8 +7,8 @@ This site can help you audit your product or site to see how accessible it is fo
 
 ## Features
 
-- **Agent Readiness Audit** — Get a short assessment with recommendations to improve your agent experience.
-- **llms.txt Generator** — Create an `llms.txt` based on your site. 
+- **Agent Readiness Audit** Get a short assessment with recommendations to improve your agent experience.
+- **llms.txt Generator** Create an `llms.txt` based on your site. 
 
 ## Prerequisites
 - You will need an `ANTHROPIC_API_KEY` for this. Get one at: [https://platform.claude.com/settings/keys](https://platform.claude.com/settings/keys)
