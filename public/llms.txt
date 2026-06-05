@@ -1,0 +1,23 @@
+# GEO Experience Auditor
+
+> A web tool for auditing how accessible your site is to AI agents and LLM-powered tools. Generates llms.txt files and scores sites on agent readiness.
+
+## Features
+
+- [Agent Readiness Audit](/): Score your site 1–10 on AI-agent accessibility, with checks for llms.txt, robots.txt, sitemap, semantic HTML, and more.
+- [llms.txt Generator](/llms-txt): Generate a standards-compliant llms.txt file for any website URL.
+
+## Source Code
+
+- [Audit Service](https://github.com/jeneesmith1/geo-experience-auditor/blob/master/app/services/auditService.ts): Server action calling Claude to score a URL across 6 agent-readiness checks.
+- [llms.txt Service](https://github.com/jeneesmith1/geo-experience-auditor/blob/master/app/services/llmsTxtService.ts): Server action that generates an llms.txt file for a given URL using Claude.
+- [Prompts](https://github.com/jeneesmith1/geo-experience-auditor/blob/master/app/utils/prompts.ts): System and user prompts that drive all AI behavior in the app.
+
+## Setup
+
+- [README](https://github.com/jeneesmith1/geo-experience-auditor/blob/master/README.md): Prerequisites, environment variables (ANTHROPIC_API_KEY), and run instructions.
+
+## Optional
+
+- [llms.txt Standard](https://llmstxt.org): The specification this tool implements and generates files for.
+- [Anthropic API Keys](https://platform.claude.com/settings/keys): Required to run this app locally.

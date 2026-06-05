@@ -3,7 +3,7 @@ Operational commands, strict architectural guardrails, and project standards for
 
 ---
 
-## 🛠️ Core Commands
+## Core Commands
 
 ### Development & Workflows
 * **Local Development Server:** `npm run dev`
@@ -15,7 +15,7 @@ Operational commands, strict architectural guardrails, and project standards for
 
 ---
 
-## 📐 Code Style & Architecture Guardrails
+## Code Style & Architecture Guardrails
 
 ### 1. Language & Framework Rules
 * **Strict TypeScript Only:** Absolutely no vanilla JavaScript (`.js`, `.jsx`) allowed. Every variable, function parameter, component prop, and API response payload must be strictly and explicitly typed.
@@ -25,8 +25,3 @@ Operational commands, strict architectural guardrails, and project standards for
 * **Zero Inline Styles:** Never use the `style={{ ... }}` attribute within any UI component layer.
 * **Enforced CSS Modules:** All layout positions, visual treatments, typography specifications, and color properties must be entirely isolated into dedicated CSS Module files (`*.module.css`).
 * **Dynamic Style Adaptation:** Pass visual modifications cleanly by querying imported modular class configurations conditionally based on state or values (e.g., dynamic audit scores):
-  ```tsx
-  import styles from './ScoreGauge.module.css';
-  
-  const themes = score >= 8 ? styles.passColor : styles.failColor;
-  return <div className={`${styles.gaugeContainer} ${themes}`}>...</div>;

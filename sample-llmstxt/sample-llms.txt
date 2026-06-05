@@ -1,0 +1,9 @@
+# ADD H1 Title
+
+> Use a blockquote to provide a description of your app. Be clear and concise
+
+## Use h2 to create file lists of URLS where agents might need additional details
+ - [LINK TITLE](https://LINKURL): Any additional details
+
+## OPTIONAL
+    - Optional section allows unneccessary URLS to be skipped if shorter context is needed
