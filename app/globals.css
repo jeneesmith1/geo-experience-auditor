@@ -364,3 +364,60 @@
 .priorityhigh { color: #c93b2b; }
 .prioritymedium { color: #d84315; }
 .prioritylow { color: #71717a; }
+
+/* llms-txt page additions */
+.headerActions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.newAuditButton {
+  text-decoration: none;
+}
+
+.heroSubtext {
+  color: #666666;
+  font-size: 0.95rem;
+  max-width: 440px;
+  line-height: 1.5;
+  margin-top: -0.5rem;
+}
+
+.inlineCode {
+  background: #f4f4f5;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.overviewSectionCentered {
+  align-items: center;
+}
+
+.resultActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+.auditButtonSmall {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.previewTextarea {
+  width: 100%;
+  min-height: 480px;
+  padding: 1.25rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 10px;
+  font-family: monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background: #fafafa;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+}

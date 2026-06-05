@@ -53,10 +53,10 @@ export default function LlmsTxtPage() {
       <header className="topHeader">
         <div className="urlIndicator">
           <span className="urlDot"></span>
-          <span className="urlText">{url || 'https://jeneesmith.com'}</span>
+          <span className="urlText">{url || 'https://merge.dev'}</span>
         </div>
-        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-          <Link href="/" className="newAuditButton" style={{ textDecoration: 'none' }}>
+        <div className="headerActions">
+          <Link href="/" className="newAuditButton">
             Agent audit
           </Link>
           {result && (
@@ -81,8 +81,8 @@ export default function LlmsTxtPage() {
             <h1 className="heroHeading">
               Generate your llms.txt
             </h1>
-            <p style={{ color: '#666', fontSize: '0.95rem', maxWidth: '440px', lineHeight: 1.5, marginTop: '-0.5rem' }}>
-              An <code style={{ background: '#f4f4f5', padding: '0.1rem 0.3rem', borderRadius: '4px', fontSize: '0.9em' }}>llms.txt</code> file helps AI tools and agents understand and navigate your site efficiently.
+            <p className="heroSubtext">
+              An <code className="inlineCode">llms.txt</code> file helps AI tools and agents understand and navigate your site efficiently.
             </p>
             <form onSubmit={handleGenerate} className="auditForm">
               <input
@@ -105,19 +105,19 @@ export default function LlmsTxtPage() {
           </div>
         ) : (
           <div className="resultsDashboard">
-            <section className="overviewSection" style={{ alignItems: 'center' }}>
+            <section className="overviewSection overviewSectionCentered">
               <div className="summaryMeta">
                 <span className="agentReadinessLabel">LLMS.TXT</span>
                 <h2 className="verdictTitle">Your file is ready</h2>
                 <p className="summaryText">
-                  Place this file at the root of your domain at <code style={{ background: '#f4f4f5', padding: '0.1rem 0.3rem', borderRadius: '4px', fontSize: '0.9em' }}>{new URL(url).origin}/llms.txt</code> to help AI agents understand your site.
+                  Place this file at the root of your domain at <code className="inlineCode">{new URL(url).origin}/llms.txt</code> to help AI agents understand your site.
                 </p>
               </div>
-              <div style={{ display: 'flex', gap: '0.75rem', marginLeft: 'auto' }}>
+              <div className="resultActions">
                 <button onClick={handleCopy} className="newAuditButton">
                   {copied ? 'Copied!' : 'Copy'}
                 </button>
-                <button onClick={handleDownload} className="auditButton" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}>
+                <button onClick={handleDownload} className="auditButton auditButtonSmall">
                   Download
                 </button>
               </div>
@@ -128,21 +128,7 @@ export default function LlmsTxtPage() {
               <textarea
                 value={result}
                 onChange={(e) => setResult(e.target.value)}
-                style={{
-                  width: '100%',
-                  minHeight: '480px',
-                  padding: '1.25rem',
-                  border: '1px solid #e4e4e7',
-                  borderRadius: '10px',
-                  fontFamily: 'monospace',
-                  fontSize: '0.875rem',
-                  lineHeight: '1.6',
-                  color: '#1a1a1a',
-                  background: '#fafafa',
-                  resize: 'vertical',
-                  outline: 'none',
-                  boxSizing: 'border-box',
-                }}
+                className="previewTextarea"
               />
             </section>
           </div>
